@@ -144,3 +144,30 @@ public class MyClass {
     }
 }
 ```
+
+## How to check if a given String is a Palindrome ?
+```js
+public class MyClass {
+    public static void main(String args[]) {
+      String str = "madam";
+      if(isPlaindrome(str)){
+          System.out.print("Given string is Palindrome!!");
+      }else{
+          System.out.print("Given string is not Palindrome!!");
+      }
+    }
+    public static boolean isPlaindrome(String str){
+        char[] arr = str.toCharArray();
+        int start = 0;
+        int end = arr.length - 1;
+        while(start < end){
+            if(arr[start] != arr[end]){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+}
+```

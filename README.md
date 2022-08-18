@@ -15,3 +15,16 @@ Array can declared and initialized in same line via syntax :
 ```
 
 ## Adding or Updating elements in a One-Dimensional Array
+```js
+public void arrayDemo(){
+  int[] arr = new int[5];
+  arr[0] = 1;
+  arr[1] = 2;
+  arr[2] = 3;
+  arr[3] = 4;
+  arr[2] = 6; // here we update the value of index 2.
+  arr[4] = 5;
+  arr[5] = 7; // here it will thrown an error index out of bound. Because size of array is 5 and trying to add 6th element. 
+}
+o/p :  1 2 6 4 5 and an error Array index out of bound.
+```

@@ -65,3 +65,35 @@ public class MyClass {
     }
 }
 ```
+
+## How to move Zeroes to end of an Array?
+```js
+public class MyClass {
+    public static void main(String args[]) {
+      int[] arr = {2,0,9,7,0,1};
+      moveZero(arr);
+      printArray(arr);
+    }
+    public static int[] moveZero(int[] arr){
+        int j = 0; // j is responsible for zero's value
+        for(int i=0; i<arr.length; i++){ // i is responsible for non zero's value
+            if(arr[i] != 0 && arr[j] == 0){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            if(arr[j] != 0){ // if j value is not zero then j stay at same index otherwise increment by 1.
+                j++;
+            }
+        }
+        return arr;
+    }
+    public static void printArray(int[] arr){
+        int n = arr.length;
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+```

@@ -97,3 +97,23 @@ public class MyClass {
     }
 }
 ```
+
+## How to resize an Array in Java ?
+```js
+public class MyClass {
+    public static void main(String args[]) {
+      int[] arr = {2,5,7,0,4,6};
+      System.out.println("Oirginal array length: " + arr.length);
+      
+      arr = resizeArray(arr, arr.length*2);
+      System.out.println("Modified array length: " + arr.length);
+    }
+    public static int[] resizeArray(int[] arr, int newSize){
+        int[] temp = new int[newSize];
+        for(int i=0; i<arr.length; i++){
+            temp[i] = arr[i];
+        }
+        return temp;
+    }
+}
+```

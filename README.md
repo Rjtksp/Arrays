@@ -117,3 +117,30 @@ public class MyClass {
     }
 }
 ```
+
+## How to Reverse an Array in Java ?
+```js
+public class MyClass {
+    public static void main(String args[]) {
+      int[] arr = {1,2,3,4,5};
+      reverse(arr,0,arr.length-1);
+      printArray(arr);
+    }
+    public static int[] reverse(int[] arr, int start, int end){
+        while(start < end){
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+        return arr;
+    }
+    public static void printArray(int[] arr){
+        int n = arr.length;
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+```

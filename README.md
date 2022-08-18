@@ -28,3 +28,14 @@ public void arrayDemo(){
 }
 o/p :  1 2 6 4 5 and an error Array index out of bound.
 ```
+
+## How to print elements of an Array in Java?
+```js
+public void printArray(int[] arr){
+  int n = arr.length;
+  for(int i=0; i<n; i++){
+    System.out.print(arr[i] + " ");
+  }
+  System.out.println();
+}
+```

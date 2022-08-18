@@ -39,3 +39,29 @@ public void printArray(int[] arr){
   System.out.println();
 }
 ```
+
+## How to find Minimum value in an Array ?
+```js
+import java.util.Scanner;
+public class MyClass {
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int size = sc.nextInt();
+    int[] arr = new int[size];
+    for (int i=0; i<size; i++){
+      arr[i] = sc.nextInt();
+    }
+    // int[] arr = {2,5,9,7,10,1,6};
+    System.out.print(findMinimum(arr));
+    }
+    public static int findMinimum(int[] arr){
+        int min = arr[0];
+        for(int i=1; i<arr.length; i++){
+            if(arr[i] < min){
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+}
+```

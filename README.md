@@ -1,7 +1,7 @@
-## Arrays
+### Arrays
 An array is a collection of items of same data type stored at contiguous memory locations.
 
-## Declaration and Initialization of a One-Dimensional Array
+### Declaration and Initialization of a One-Dimensional Array
 Array can declared and initialized in same line via syntax :
 ```js
   dataType[] arrName = new dataType[size];
@@ -14,7 +14,7 @@ Array can declared and initialized in same line via syntax :
   int[] arr = {1,2,3,4,5};
 ```
 
-## Adding or Updating elements in a One-Dimensional Array
+### Adding or Updating elements in a One-Dimensional Array
 ```js
 public void arrayDemo(){
   int[] arr = new int[5];
@@ -29,7 +29,7 @@ public void arrayDemo(){
 o/p :  1 2 6 4 5 and an error Array index out of bound.
 ```
 
-## How to print elements of an Array in Java?
+### How to print elements of an Array in Java?
 ```js
 public void printArray(int[] arr){
   int n = arr.length;
@@ -40,7 +40,7 @@ public void printArray(int[] arr){
 }
 ```
 
-## How to resize an Array in Java ?
+### How to resize an Array in Java ?
 ```js
 public class MyClass {
     public static void main(String args[]) {
@@ -60,7 +60,7 @@ public class MyClass {
 }
 ```
 
-## How to find Minimum value in an Array ?
+### How to find Minimum value in an Array ?
 ```js
 import java.util.Scanner;
 public class MyClass {
@@ -86,7 +86,7 @@ public class MyClass {
 }
 ```
 
-## How to move Zeroes to end of an Array?
+### How to move Zeroes to end of an Array?
 ```js
 public class MyClass {
     public static void main(String args[]) {
@@ -118,7 +118,7 @@ public class MyClass {
 }
 ```
 
-## How to Reverse an Array in Java ?
+### How to Reverse an Array in Java ?
 ```js
 public class MyClass {
     public static void main(String args[]) {
@@ -145,7 +145,7 @@ public class MyClass {
 }
 ```
 
-## How to check if a given String is a Palindrome ?
+### How to check if a given String is a Palindrome ?
 ```js
 public class MyClass {
     public static void main(String args[]) {
@@ -172,7 +172,7 @@ public class MyClass {
 }
 ```
 
-## Two Sum problem ?
+### Two Sum problem ?
 ```js
 import java.util.*;
 public class MyClass {
@@ -196,7 +196,7 @@ public class MyClass {
 }
 ```
 
-## How to merge two sorted arrays in Java?
+### How to merge two sorted arrays in Java?
 ```js
 import java.util.*;
 public class MyClass {
@@ -241,7 +241,7 @@ public class MyClass {
 }
 ```
 
-## Maximum Sum Subarray - Kadane's Algorithm
+### Maximum Sum Subarray - Kadane's Algorithm
 ```js
 import java.util.*;
 public class MyClass {
@@ -266,4 +266,4 @@ public class MyClass {
 }
 ```
 
-## 
+### 

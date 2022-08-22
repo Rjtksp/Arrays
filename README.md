@@ -171,3 +171,25 @@ public class MyClass {
     }
 }
 ```
+
+## Two Sum problem ?
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      int[] arr = {2,11,5,10,7,8};
+      int target = 9;
+      int[] res = new int[2];
+      HashMap<Integer,Integer> map = new HashMap<>();
+      for(int i=0; i<arr.length; i++){
+          if(map.containsKey(target - arr[i])){
+              res[0] = map.get(target - arr[i]);
+              res[1] = i;
+          }else{
+              map.put(arr[i], i);
+          }
+      }
+      for(int i=0; i<res.length; i++){
+          System.out.print(res[i]+" ");
+      }
+    }
+}

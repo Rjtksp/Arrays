@@ -174,6 +174,7 @@ public class MyClass {
 
 ## Two Sum problem ?
 import java.util.*;
+```js
 public class MyClass {
     public static void main(String args[]) {
       int[] arr = {2,11,5,10,7,8};
@@ -193,3 +194,6 @@ public class MyClass {
       }
     }
 }
+```
+
+## How to merge two sorted arrays in Java?

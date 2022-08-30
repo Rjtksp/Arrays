@@ -338,3 +338,28 @@ public class MyClass {
     }
 }
 ```
+
+### Remove Vowels from a String?
+```js
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      String str = "ice cream";
+      System.out.print(removeVowels(str));
+    }
+    public static String removeVowels(String str){
+        Set<Character> vowels = Set.of('a','e','i','o','u');
+        StringBuilder sb = new StringBuilder();
+        
+        char[] charArray = str.toCharArray();
+        for(Character ch : charArray){
+            if(!vowels.contains(ch)){
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+    }
+}
+```
+
+### 

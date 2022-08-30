@@ -313,3 +313,28 @@ public class MyClass {
     }
 }
 ```
+
+### First Non-Repeating Character in a String?
+```js
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      String str = "racecars";
+      System.out.print(firstNonRep(str));
+    }
+    public static int firstNonRep(String str){
+        HashMap<Character,Integer> map = new HashMap<>();
+        char[] chars = str.toCharArray();
+        for(char ch : chars){
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+        }
+        for(int i=0; i<chars.length; i++){
+            char ch = chars[i];
+            if(map.get(ch) == 1){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
+```

@@ -362,4 +362,158 @@ public class MyClass {
 }
 ```
 
+### Three Sum problem?
+```js
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+      int[] arr = {1,2,0,4,3,7};
+      int target = 6;
+      threeSum(arr, target);
+    }
+    public static void threeSum(int[] arr, int target){
+        Arrays.sort(arr); // nlogn
+        for(int i=0; i<arr.length-2; i++){ // O(n)
+            int j=i+1;
+            int k=arr.length-1;
+            while(j<k){
+                int sum = arr[i] + arr[j] + arr[k];
+                if(sum == target){
+                    System.out.println(arr[i] + "," + arr[j] + "," + arr[k]);
+                    j++;
+                    k--;
+                }else if(sum > target){
+                    k--;
+                }else{
+                    j++;
+                }
+            }
+        }
+    }
+}
+```
+
 ### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```
+
+### 
+```js
+
+```

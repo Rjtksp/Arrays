@@ -444,25 +444,15 @@ public class MyClass {
     		}
     	}
     	// traversing each element of A2, first come first serve
-    	for (int i = 0; i < M; i++) {
-    		// checking if current element of A2 is present in
-    		// A1 or not if not present go to next iteration
-    		// else store number of times it is appearing in A1
-    		// in ans array
-    		
+    	for (int i = 0; i < M; i++) {    		
     		if (mp.containsKey(A2[i])) {
-    
-    			// mp[ A2[i] ] = frequency of A2[i] element in A1 array
-    			for (int j = 1; j <= mp.get(A2[i]); j++)
-    				ans[ind++] = A2[i];
+			for (int j = 1; j <= mp.get(A2[i]); j++)
+				ans[ind++] = A2[i];
     		}
-    		// to avoid duplicate storing of same element of A2 in ans array
     		mp.remove(A2[i]);
     	}
     
-    	// store the remaining elements of A1 in ans array
     	for (HashMap.Entry<Integer,Integer> it : mp.entrySet()) {
-    		// it.second = frequency of remaining elements
     		for (int j = 1; j <= it.getValue(); j++) {
     			ans[ind++] = it.getKey();
     		}

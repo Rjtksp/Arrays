@@ -430,38 +430,37 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class MyClass {
-    static void sortA1ByA2(int A1[], int N, int A2[], int M) {
+    static void sortA1ByA2(int arr1[], int n, int arr2[], int m) {
     	HashMap<Integer, Integer> mp = new HashMap<>();
-    	int[] ans = new int[N];
+    	int[] ans = new int[n];
     	int ind = 0;
-    
-    	// storing frequency of each element of A1 in map [ key, value ]
-    	for (int i = 0; i < N; i++) {
-    		if (!mp.containsKey(A1[i])) {
-    		    mp.put(A1[i],1);
+    	for (int i = 0; i < n; i++) {
+    		if (!mp.containsKey(arr1[i])) {
+    		    mp.put(arr1[i],1);
     		}else {
-    		    mp.put(A1[i],mp.get(A1[i])+1);
+    		    mp.put(arr1[i],mp.get(arr1[i])+1);
     		}
     	}
-    	// traversing each element of A2, first come first serve
-    	for (int i = 0; i < M; i++) {    		
-    		if (mp.containsKey(A2[i])) {
-			for (int j = 1; j <= mp.get(A2[i]); j++)
-				ans[ind++] = A2[i];
+    	for (int i = 0; i < m; i++) {    		
+    		if (mp.containsKey(arr2[i])) {
+    			for (int j = 1; j <= mp.get(arr2[i]); j++)
+    				ans[ind++] = arr2[i];
     		}
-    		mp.remove(A2[i]);
+    		mp.remove(arr2[i]);
     	}
     
+    	// store the remaining elements of A1 in ans array
     	for (HashMap.Entry<Integer,Integer> it : mp.entrySet()) {
+    		// it.second = frequency of remaining elements
     		for (int j = 1; j <= it.getValue(); j++) {
     			ans[ind++] = it.getKey();
     		}
     	}
     	
     	System.out.println("Sorted array is ");
-		for (int i = 0; i < N; i++) {
+	for (int i = 0; i < n; i++) {
     		System.out.print(ans[i] + " ");
-		}
+	}
     }
 	public static void main(String[] args) {
 		int A1[] = { 2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8 };

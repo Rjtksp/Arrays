@@ -376,7 +376,7 @@ public class MyClass {
         for(int i=0; i<arr.length-2; i++){ // O(n)
             int j=i+1;
             int k=arr.length-1;
-            while(j<k){
+            while(j<k){ // O(n)
                 int sum = arr[i] + arr[j] + arr[k];
                 if(sum == target){
                     System.out.println(arr[i] + "," + arr[j] + "," + arr[k]);

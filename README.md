@@ -393,12 +393,37 @@ public class MyClass {
 }
 ```
 
-### 
+### Merge two sorted arrays with O(1) extra space?
 ```js
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collections;
 
+public class MyClass {
+    public static void merge(int[] arr1, int[] arr2, int n, int m){
+    	int i = 0;
+    	// While loop till last element of array 1 is greater than first element of array 2
+    	while (arr1[n - 1] > arr2[0]) {
+    		if (arr1[i] > arr2[0]) {
+    			int temp = arr1[i];
+    			arr1[i] = arr2[0];
+    			arr2[0] = temp;
+    			Arrays.sort(arr2);
+    		}
+    		i++;
+    	}
+    }
+    public static void main(String[] args){
+        int arr1[] = { 1, 5, 9, 10, 15, 20 };
+        int arr2[] = { 2, 3, 8, 13 };
+    	merge(arr1,arr2,arr1.length, arr2.length);
+    	System.out.println(Arrays.toString(arr1));
+    	System.out.println(Arrays.toString(arr2));
+    }
+}
 ```
 
-### 
+### Sort an array according to the order defined by another array?
 ```js
 
 ```

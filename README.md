@@ -362,7 +362,7 @@ public class MyClass {
 }
 ```
 
-### Three Sum problem?
+### Three Sum problem? (Triplets)
 ```js
 import java.util.*;
 public class MyClass {
@@ -391,6 +391,39 @@ public class MyClass {
         }
     }
 }
+```
+
+### Find Triplets (Hashing) ?
+```js
+import java.util.*;
+public class MyClass {
+	static boolean find3Numbers(int A[], int arr_size, int sum){
+		for (int i = 0; i < arr_size - 2; i++) {
+			HashSet<Integer> s = new HashSet<Integer>();
+			int curr_sum = sum - A[i];
+			for (int j = i + 1; j < arr_size; j++)
+			{
+				if (s.contains(curr_sum - A[j]))
+				{
+					System.out.printf("Triplet is %d, %d, %d", A[i],
+									A[j], curr_sum - A[j]);
+					return true;
+				}
+				s.add(A[j]);
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		int A[] = {-3, 1, 4, -5, -4, 2, 3};
+		int sum = 0;
+		int arr_size = A.length;
+
+		find3Numbers(A, arr_size, sum);
+	}
+}
+
 ```
 
 ### Merge two sorted arrays with O(1) extra space?

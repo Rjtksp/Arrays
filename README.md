@@ -506,8 +506,37 @@ public class MyClass {
 }
 ```
 
-### 
+### Sort an array of 0’s, 1’s, and 2’s (Dutch National Flag Problem)?
 ```js
+import java.util.*;
+public class MyClass {
+	public static void main(String[] args) {
+		int arr[] = {1,2,0,1,1,2,2,0,0};
+		int i=0;
+		int j=0;
+		int k=arr.length-1;
+		while(i<=k){
+		  if(arr[i] == 0){
+		      swap(arr,i,j);
+		      i++;
+		      j++;
+		  }else if(arr[i] == 1){
+		      i++;
+		  }else if(arr[i] == 2){
+		      swap(arr,i,k);
+		      k--;
+		  }
+		}
+		for(int m=0; m<arr.length; m++){
+		    System.out.print(arr[m]+" ");
+		}
+	}
+	public static void swap(int[] arr, int i, int j){
+	    int temp = arr[i];
+	    arr[i] = arr[j];
+	    arr[j] = temp;
+	}
+}
 
 ```
 

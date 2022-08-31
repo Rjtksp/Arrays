@@ -540,9 +540,36 @@ public class MyClass {
 
 ```
 
-### 
+### Remove Even Integers from an Array?
 ```js
-
+import java.util.*;
+public class MyClass {
+	public static void main(String[] args) {
+		int arr[] = {3, 2, 4, 7, 10, 6, 5};
+		int[] result = removeEven(arr);
+		for(int i=0; i<result.length; i++){
+		    System.out.print(result[i]+" ");
+		}
+		
+	}
+	public static int[] removeEven(int[] arr){
+	    int odd = 0;
+	    for(int i=0; i<arr.length; i++){
+	        if(arr[i] % 2 != 0){
+	            odd++;
+	        }
+	    }
+	    int[] res = new int[odd];
+	    int index = 0;
+	    for(int i=0; i<arr.length; i++){
+	        if(arr[i] % 2 != 0){
+	            res[index] = arr[i];
+	            index++;
+	        }
+	    }
+	    return res;
+	}
+}
 ```
 
 ### 

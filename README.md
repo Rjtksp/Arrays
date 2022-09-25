@@ -252,7 +252,7 @@ public class MyClass {
     public static int maxSum(int[] arr){
         int currentMax = arr[0];
         int maxSoFar = arr[0];
-        for(int i=0; i<arr.length; i++){
+        for(int i=1; i<arr.length; i++){
             currentMax = currentMax + arr[i]; //element become part of given subarray.
             if(currentMax < arr[i]){ 
                 currentMax = arr[i]; //element decides to starts its own array.
